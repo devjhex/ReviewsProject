@@ -1,0 +1,136 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.342);
+}
+main{
+
+
+    .titleContainer {
+        margin-bottom: 4rem;
+
+        .line {
+            height: 5px;
+            width: 90px;
+            background-color: rgba(241, 38, 38, 0.912);
+            margin-inline: auto;
+        }
+    }
+
+    article {
+        max-width: 450px;
+        background-color: rgba(65, 62, 62, 0.611);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+    } 
+
+    .imgContainer{
+        max-width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: red;
+        position: relative;
+        margin-top: 1rem;
+        z-index:5;
+        
+    
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: relative;
+            z-index:4;
+        }
+    }
+    .imgContainer::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        background-color:red;
+        width: 140px;
+        height: 140px;
+        border-radius:50%;
+        transform: translateX(-130px);
+    }
+    .imgContainer::before{
+        content: '"';
+        position: absolute;
+        z-index: 6;
+        background-color:red;
+        width: 40px;
+        height: 40px;
+        border-radius:50%;
+        transform: translate(-10px, 10px);
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .review__name {
+        font-size: 1.5rem;
+    }
+    h3{
+        color: red;
+    }
+    .review__text{
+        max-width: 80%;
+        background-color: black;
+        color: white;
+        margin-top: 1rem;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    .btnGroup{
+        margin-bottom: 1rem;
+        margin-inline: auto;
+    }
+    #previous, #next {
+        all: unset;
+        background-color: red;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        margin-right: 10px;
+        border: 2px solid transparent;
+        transition: all 1s;
+    }
+    #previous:hover, #next:hover{
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+    }
+
+    #random{
+        all: unset;
+        background-color: red;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        padding: 5px;
+        margin-bottom: 1rem;
+        transition: all 1s;
+    }
+    #random:hover{
+        background-color: rgba(0, 0, 0, 0.744);
+        color: white;
+        border-color: grey;
+    }
+}
